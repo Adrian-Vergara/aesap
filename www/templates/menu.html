@@ -1,0 +1,46 @@
+<ion-side-menus enable-menu-with-back-views="false" ng-controller="MenuCtrl as vm">
+    <ion-side-menu-content>
+        <ion-nav-bar align-title="center" class="bar-menu" style="font-weight: bold;">
+            <ion-nav-buttons side="left">
+                <button style="color: #fff;" class="button button-icon button-clear ion-navicon-round" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" style="background-color: #455a64 !important;">
+        <ion-content>
+            <img src="img/logo.jpg" width="100%"/>
+            <div class="list">
+                <a menu-close class="ItemMenu item-icon-left colorItemMenu">
+                    <i class="icon ion-university"></i>
+                    Adrian Vergara
+                </a>
+                <a menu-close class="ItemMenu item-icon-left colorItemMenu" ui-sref="app.home">
+                    <i class="icon ion-ios-home"></i>
+                    Principal
+                </a>
+                <a menu-close class="ItemMenu item-icon-left colorItemMenu" ui-sref="app.menu-entrenamiento">
+                    <i class="icon ion-clipboard"></i>
+                    Entrenamiento
+                </a>
+                <a menu-close class="ItemMenu item-icon-left colorItemMenu">
+                    <i class="icon ion-ios-paper"></i>
+                    Simulacro
+                </a>
+                <a menu-close class="ItemMenu item-icon-left colorItemMenu">
+                    <i class="icon ion-trophy"></i>
+                    Retos
+                </a>
+                <a menu-close class="ItemMenu item-icon-left colorItemMenu">
+                    <i class="icon ion-arrow-graph-up-right"></i>
+                    Resultados
+                </a>
+                <a menu-close class="ItemMenu item-icon-left colorItemMenu" ui-sref="login">
+                    <i class="icon ion-power"></i>
+                    Cerrar Sesión
+                </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

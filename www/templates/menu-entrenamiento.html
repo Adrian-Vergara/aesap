@@ -1,0 +1,29 @@
+<ion-view view-title='SaberApp Pro'>
+    <ion-content>
+        <div class="container padding" style="margin-top: 45px;">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center">
+                        <a style="text-decoration: none; color: #666">
+                            <i class="ion ion-compose" style="font-size: 70px;"></i>
+                            <p style="font-size: 20px; font-weight: bold;">Nuevo Entrenamiento</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center">
+                        <a style="text-decoration: none; color: #666">
+                            <i class="ion ion-stats-bars" style="font-size: 70px;"></i>
+                            <p style="font-size: 20px; font-weight: bold;">Entrenamientos Realizados</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar bar-footer sombra" style="position: fixed;" ng-controller="HomeCtrl as vm">
+        <div class="buttons">
+            <button style="color:#fff;" ng-click="vm.irHome()" class="button button-icon ion-chevron-left">Atrás</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>
