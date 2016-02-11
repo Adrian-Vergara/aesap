@@ -109,8 +109,8 @@
                         sapro._setToken(respuesta.token);
                         sapro._setEmail(respuesta.usuario.email);
                         sapro._setIdUsuario(respuesta.usuario.id_usuario);
+                        sapro._setNombreCompleto(respuesta.usuario.primer_nombre+" "+respuesta.usuario.primer_apellido);
                         $state.go('app.home');
-
                     }
                 },
                 function (errorPl) {

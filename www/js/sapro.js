@@ -12,8 +12,14 @@ var sapro = {
     _getIdUsuario: function () {
         return localStorage.id_usuario;
     },
+    _setNombreCompleto: function (nombre_completo) {
+        localStorage.setItem('nombre_completo', nombre_completo);
+    },
+    _getNombreCompleto: function () {
+        return localStorage.nombre_completo;
+    },
     _getUrl: function() {
-        return "http://localhost/AdrianVergara/aesap_server/api";
+        return "http://localhost/AdrianVergara/aesap_server/public/api";
     },
     _setToken: function(token){
         localStorage.setItem('satellizer_token', token);

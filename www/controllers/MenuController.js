@@ -7,6 +7,7 @@
     function MenuController($ionicHistory, $state, $ionicSideMenuDelegate)
     {
         var vm = this;
+        vm.nombre_completo = sapro._getNombreCompleto();
         $ionicHistory.nextViewOptions({
             disableBack: true
         });
