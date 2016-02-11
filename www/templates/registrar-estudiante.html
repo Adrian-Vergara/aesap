@@ -1,0 +1,58 @@
+﻿<ion-content>
+
+    <div class="bar bar-header bar-menu">
+        <h1 class="title" style="color: #fff;">Registro</h1>
+    </div>
+    <br><br><br>
+
+    <div class="list card padding">
+        <label class="item item-input">
+            <span class="input-label">Primer Nombre:</span>
+            <input type="text" ng-model="estudiante.usuario.primer_nombre" autofocus>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Primer Apellido:</span>
+            <input type="text" ng-model="estudiante.usuario.primer_apellido">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Email:</span>
+            <input type="email" ng-model="estudiante.usuario.email">
+            <i class="icon ion-checkmark-round" style="margin-right: 10px; color: #5cb85c;" ng-show="estudiante.usuario.email"></i>
+            <i class="icon ion-close-round" style="margin-right: 10px; color: #d9534f;" ng-show="!estudiante.usuario.email && estudiante.usuario.email != ''"></i>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Password:</span>
+            <input type="password" ng-model="estudiante.usuario.password">
+            <i class="icon ion-checkmark-round" style="margin-right: 10px; color: #5cb85c;" ng-show="estudiante.usuario.password != '' && estudiante.usuario.confirm_password != '' && estudiante.usuario.password == estudiante.usuario.confirm_password"></i>
+            <i class="icon ion-close-round" style="margin-right: 10px; color: #d9534f;" ng-show="estudiante.usuario.password != '' && estudiante.usuario.confirm_password != '' && estudiante.usuario.password != estudiante.usuario.confirm_password"></i>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Repita Password:</span>
+            <input type="password" ng-model="estudiante.usuario.confirm_password">
+            <i class="icon ion-checkmark-round" style="margin-right: 10px; color: #5cb85c;" ng-show="estudiante.usuario.password != '' && estudiante.usuario.confirm_password != '' && estudiante.usuario.password == estudiante.usuario.confirm_password"></i>
+            <i class="icon ion-close-round" style="margin-right: 10px; color: #d9534f;" ng-show="estudiante.usuario.password != '' && estudiante.usuario.confirm_password != '' && estudiante.usuario.password != estudiante.usuario.confirm_password"></i>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Universidad:
+            </div>
+            <select ng-model="estudiante.universidad_seleccionada" ng-change="estudiante.cargar_programa()" ng-options="universidad as universidad.nombre_universidad for universidad in estudiante.universidades track by universidad.id_universidad" >
+            </select>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Programa:
+            </div>
+            <select ng-model="estudiante.programa_seleccionado" ng-options="programa as programa.nombre_programa for programa in estudiante.programas track by programa.id_programa">
+            </select>
+        </label>
+        <button ng-click="estudiante.registrar_estudiante()" class="button button-block activated" style="background-color: #0277bd; color: #fff;">
+            Sign In
+        </button>
+    </div>
+</ion-content>
+<ion-footer-bar class="bar bar-footer sombra" style="position: fixed;">
+    <div class="buttons">
+        <button style="color:#fff;" ui-sref="login" class="button button-icon ion-chevron-left">Atrás</button>
+    </div>
+</ion-footer-bar>

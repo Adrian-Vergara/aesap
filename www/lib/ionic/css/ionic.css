@@ -4010,9 +4010,9 @@ a.subdued {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 44px; }
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 47px; }
     .bar .title.title-left {
       text-align: left; }
     .bar .title.title-right {

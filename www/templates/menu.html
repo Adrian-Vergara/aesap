@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false" ng-controller="MenuCtrl as vm">
+<ion-side-menus>
     <ion-side-menu-content>
         <ion-nav-bar align-title="center" class="bar-menu" style="font-weight: bold;">
             <ion-nav-buttons side="left">
@@ -10,7 +10,7 @@
     </ion-side-menu-content>
     <ion-side-menu side="left" style="background-color: #455a64 !important;">
         <ion-content>
-            <img src="img/logo.jpg" width="100%"/>
+            <img src="img/fondo_login.jpg" width="100%" style="height: 150px;;"/>
             <div class="list">
                 <a menu-close class="ItemMenu item-icon-left colorItemMenu">
                     <i class="icon ion-university"></i>
@@ -36,7 +36,7 @@
                     <i class="icon ion-arrow-graph-up-right"></i>
                     Resultados
                 </a>
-                <a menu-close class="ItemMenu item-icon-left colorItemMenu" ui-sref="login">
+                <a menu-close ng-click="menu.cerrar_sesion()" class="ItemMenu item-icon-left colorItemMenu">
                     <i class="icon ion-power"></i>
                     Cerrar Sesión
                 </a>

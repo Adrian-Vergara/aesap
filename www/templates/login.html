@@ -1,0 +1,45 @@
+﻿<ion-content>
+    <!--<img src="../img/fondo_login.jpg" alt="" style="opacity: 0.2; z-index: -20; position: fixed;">-->
+    <div class="bar bar-header bar-menu">
+        <h1 class="title" style="color: #fff;">Login</h1>
+    </div>
+    <br><br><br>
+
+    <div class="row">
+        <div class="col">
+            <div class="list padding">
+                <img src="img/logo.jpg" class="logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll padding">
+        <div class="card" style="box-shadow: none;">
+            <div class="list">
+                <label class="item item-input" style="border-top: 1px solid #ddd;">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="user.credenciales.email">
+                </label>
+                <label class="item item-input" style="border-bottom: 1px solid #ddd;">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="user.credenciales.password">
+                </label>
+            </div>
+            </div>
+        </div>
+        <div class="spacer" style="height: 40px;"></div>
+        <button ng-click="user.login()" class="button button-block button-positive" style="background-color: #0277bd; color: #fff;">
+            Sign In
+        </button>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <p>&iquest;No tienes una cuenta SaberApp?</p>
+            <a ui-sref="registrar-estudiante" style="text-decoration: none;">¡Registrate!</a>
+        </div>
+        <!--<div class="col text-center">
+            <a ui-sref="app.home" style="text-decoration: none;">HOME</a>
+        </div>-->
+    </div>
+
+</ion-content>

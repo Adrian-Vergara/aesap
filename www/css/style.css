@@ -30,7 +30,7 @@ a.colorItemMenu:hover
 .sombra
 {
     box-shadow: 0 -1px 5px 4px #666666;
-    background-color: #0277bd !important;
+    background-color: #0277bd !important
 }
 
 .bar-menu
@@ -46,25 +46,36 @@ a.colorItemMenu:hover
     padding: 5px;
     width: 100%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    background-color: #0277bd !important;
+    /*background-color: #0277bd !important;*/
     border-style: none;
     border-bottom: none;
     height: 50px;
     color: #fff;
+    background-color: #0277bd;
+    border-color: #e42112;
 }
 
-.bar-titulo
+.thumb
 {
-    display: block;
+    border-radius: 0% 50% 50% 50%;
     position: absolute;
-    top: 0;
-    z-index: 0;
-    overflow: hidden;
-    margin: 0 10px;
-    min-width: 30px;
-    height: 43px;
-    text-align: center;
-    line-height: 47px;
-    font-size: 20px;
-    font-weight: bold;
+    border: none;
+    height: 0;
+    border-radius: 50%;
+    background-color: #26a69a;
+    transform-origin: 50% 50%;
+}
+
+.logo {
+    display: block;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#fondo{
+    background-image: url("../img/fondo_login.jpg");
+    height: 100%;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
 }
