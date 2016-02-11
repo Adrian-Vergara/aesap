@@ -107,6 +107,8 @@
                     {
                         _showAlert('Exito', respuesta.mensaje);
                         sapro._setToken(respuesta.token);
+                        sapro._setEmail(respuesta.usuario.email);
+                        sapro._setIdUsuario(respuesta.usuario.id_usuario);
                         $state.go('app.home');
 
                     }

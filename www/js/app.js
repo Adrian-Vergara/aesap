@@ -53,7 +53,7 @@
                     controller: 'EstudianteController as estudiante'
                 });
 
-            $authProvider.loginUrl = 'http://localhost:8000/api/authenticate';
+            $authProvider.loginUrl = 'http://localhost/AdrianVergara/aesap_server/api/authenticate';
             $urlRouterProvider.otherwise('/app/home');
             $httpProvider.defaults.useXDomain = true;
             delete $httpProvider.defaults.headers.common['X-Requested-With'];
