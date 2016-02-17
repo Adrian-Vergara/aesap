@@ -1,30 +1,30 @@
 var sapro = new Object();
 var sapro = {
     _setEmail: function(email){
-        localStorage.setItem("email", email);
+        localStorage.setItem("email", email)
     },
     _getEmail: function(){
         return localStorage.getItem("email");
     },
-    _setIdUsuario: function (id_usuario) {
-        localStorage.setItem('id_usuario', id_usuario);
+    _setIdEstudiante: function (id_estudiante) {
+        localStorage.setItem('id_estudiante', id_estudiante);
     },
-    _getIdUsuario: function () {
-        return localStorage.id_usuario;
+    _getIdEstudiante: function () {
+        return localStorage.id_estudiante;
+    },
+    _setToken: function (token) {
+        localStorage.setItem('satellizer_token', token);
+    },
+    _getToken: function () {
+        return localStorage.satellizer_token;
     },
     _setNombreCompleto: function (nombre_completo) {
-        localStorage.setItem('nombre_completo', nombre_completo);
+        localStorage.setItem('nombre_completo',nombre_completo);
     },
     _getNombreCompleto: function () {
         return localStorage.nombre_completo;
     },
     _getUrl: function() {
-        return "http://localhost/AdrianVergara/aesap_server/public/api";
-    },
-    _setToken: function(token){
-        localStorage.setItem('satellizer_token', token);
-    },
-    _getToken: function () {
-        return localStorage.satellizer_token;
+        return "http://localhost:8080/AdrianVergara/SaberAppPro/public/api";
     }
 };

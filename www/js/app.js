@@ -43,7 +43,7 @@
                         'menuContent': {
                             cache: false,
                             templateUrl: 'templates/menu-entrenamiento.html',
-                            controller: 'EntrenamientoController as entrenamiento'
+                            controller: 'EstudianteController as estudiante'
                         }
                     }
                 })
@@ -53,7 +53,7 @@
                     controller: 'EstudianteController as estudiante'
                 });
 
-            $authProvider.loginUrl = 'http://localhost/AdrianVergara/aesap_server/public/api/authenticate';
+            $authProvider.loginUrl = 'http://localhost:8080/AdrianVergara/SaberAppPro/public/api/authenticate';
             $urlRouterProvider.otherwise('/app/home');
             $httpProvider.defaults.useXDomain = true;
             delete $httpProvider.defaults.headers.common['X-Requested-With'];

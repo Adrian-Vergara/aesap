@@ -16,8 +16,10 @@
             else {
                 $auth.login(vm.credenciales).then(function(pl){
                     var respuesta = pl.data;
-                    alert("exito");
-                    console.log(respuesta.usuario);
+                    sapro._setToken(respuesta[0].token);
+                    sapro._setIdEstudiante(respuesta.usuario.id_usuario);
+                    sapro._setEmail(respuesta.usuario.email);
+                    sapro._setNombreCompleto(respuesta.usuario.primer_nombre+" "+respuesta.usuario.primer_apellido);
                     $state.go('app.home', {});
                 });
             }

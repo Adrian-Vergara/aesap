@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col">
                     <div class="text-center">
-                        <a style="text-decoration: none; color: #666">
+                        <a style="text-decoration: none; color: #666" ng-click="estudiante.show()">
                             <i class="ion ion-compose" style="font-size: 70px;"></i>
                             <p style="font-size: 20px; font-weight: bold;">Nuevo Entrenamiento</p>
                         </a>
@@ -17,17 +17,6 @@
                             <p style="font-size: 20px; font-weight: bold;">Entrenamientos Realizados</p>
                         </a>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-75">
-                    <input type="range" min="5" max="35" ng-model="vm.range" step="5" style="width: 100%;">
-                </div>
-                <div class="col">
-                    <a class="item-icon-right" style="color: #666; font-weight: bold; font-size: 16px;">
-                        {{vm.range}}
-                        <i class="ion ion-help" style="color: #666;"></i>
-                    </a>
                 </div>
             </div>
         </div>

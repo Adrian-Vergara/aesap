@@ -19,10 +19,13 @@
         };
 
         vm.registrar_estudiante = function(estudiante){
-            var req = $http.post(url + '/usuarios', estudiante);
+            var req = $http.post(url + "/usuarios", estudiante);
             return req;
         };
 
+        vm.show = function (id_usuario) {
+            var req = $http.get(url + '/usuarios/' + id_usuario);
+            return req;
+        }
     };
-
 })();

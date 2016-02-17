@@ -27,6 +27,10 @@
             vm.programa_seleccionado = vm.programas[0];
         };
 
+        vm.show = function () {
+            _show();
+        };
+
         vm.registrar_estudiante = function () {
             vm.usuario.id_programa = vm.programa_seleccionado.id_programa;
             vm.usuario.id_universidad = vm.universidad_seleccionada.id_universidad;
@@ -108,7 +112,7 @@
                         _showAlert('Exito', respuesta.mensaje);
                         sapro._setToken(respuesta.token);
                         sapro._setEmail(respuesta.usuario.email);
-                        sapro._setIdUsuario(respuesta.usuario.id_usuario);
+                        sapro._setIdEstudiante(respuesta.usuario.id_usuario);
                         sapro._setNombreCompleto(respuesta.usuario.primer_nombre+" "+respuesta.usuario.primer_apellido);
                         $state.go('app.home');
                     }
@@ -118,5 +122,17 @@
                 }
             )
         };
+
+        function _show(){
+            var promiseGet = EstudianteService.show(sapro._getIdEstudiante());
+            promiseGet.then(
+                function (pl) {
+                    console.log(pl.data.usuario);
+                },
+                function (errorPl) {
+                    console.log(errorPl);
+                }
+            );
+        }
     };
 })();

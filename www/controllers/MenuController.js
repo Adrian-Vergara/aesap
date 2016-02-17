@@ -7,7 +7,7 @@
     function MenuController($ionicHistory, $state, $ionicSideMenuDelegate)
     {
         var vm = this;
-        vm.nombre_completo = sapro._getNombreCompleto();
+
         $ionicHistory.nextViewOptions({
             disableBack: true
         });
@@ -26,5 +26,17 @@
             localStorage.clear();
             $state.go('login');
         };
+
+        vm.init = function () {
+            vm.nombre_completo = sapro._getNombreCompleto();
+            alert(vm.nombre_completo);
+        };
+
+        function _init (){
+            vm.nombre_completo = sapro._getNombreCompleto();
+            alert(vm.nombre_completo);
+        };
+
+        _init();
     }
 })();
