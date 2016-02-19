@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('starter', ['ionic', 'satellizer'])
+        .module('starter', ['ionic'])
         .run(function($ionicPlatform) {
             $ionicPlatform.ready(function() {
                 if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -14,7 +14,9 @@
                 }
             });
         })
-        .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $authProvider) {
+        .config(function ($stateProvider, $urlRouterProvider) {
+            $urlRouterProvider.otherwise('/app/home');
+
             $stateProvider
                 .state('login', {
                     url: '/login',
@@ -43,7 +45,7 @@
                         'menuContent': {
                             cache: false,
                             templateUrl: 'templates/menu-entrenamiento.html',
-                            controller: 'EstudianteController as estudiante'
+                            controller: 'EntrenamientoController as entrenamiento'
                         }
                     }
                 })
@@ -52,10 +54,5 @@
                     templateUrl: 'templates/registrar-estudiante.html',
                     controller: 'EstudianteController as estudiante'
                 });
-
-            $authProvider.loginUrl = 'http://localhost:8080/AdrianVergara/SaberAppPro/public/api/authenticate';
-            $urlRouterProvider.otherwise('/app/home');
-            $httpProvider.defaults.useXDomain = true;
-            delete $httpProvider.defaults.headers.common['X-Requested-With'];
         });
 })();

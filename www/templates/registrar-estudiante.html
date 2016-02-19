@@ -46,8 +46,12 @@
             <select ng-model="estudiante.programa_seleccionado" ng-options="programa as programa.nombre_programa for programa in estudiante.programas track by programa.id_programa">
             </select>
         </label>
+        <br>
+        <div class="spacer text-center" style="height: 40px;">
+            <ion-spinner class="spinner spinner-android" ng-show="estudiante.loading"></ion-spinner>
+        </div>
         <button ng-click="estudiante.registrar_estudiante()" class="button button-block activated" style="background-color: #0277bd; color: #fff;">
-            Sign In
+            Registrar
         </button>
     </div>
 </ion-content>

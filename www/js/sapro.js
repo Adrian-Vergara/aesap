@@ -13,10 +13,10 @@ var sapro = {
         return localStorage.id_estudiante;
     },
     _setToken: function (token) {
-        localStorage.setItem('satellizer_token', token);
+        localStorage.setItem('token', token);
     },
     _getToken: function () {
-        return localStorage.satellizer_token;
+        return localStorage.token;
     },
     _setNombreCompleto: function (nombre_completo) {
         localStorage.setItem('nombre_completo',nombre_completo);
@@ -25,6 +25,6 @@ var sapro = {
         return localStorage.nombre_completo;
     },
     _getUrl: function() {
-        return "http://localhost:8080/AdrianVergara/SaberAppPro/public/api";
+        return "http://localhost:8080/AdrianVergara/aesap_servidor/public/api";
     }
 };

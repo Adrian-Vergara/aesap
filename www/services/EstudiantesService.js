@@ -27,5 +27,11 @@
             var req = $http.get(url + '/usuarios/' + id_usuario);
             return req;
         }
+
+        vm.login_usuario = function(credenciales){
+            console.log(url);
+            var req = $http.post(url + '/login_usuarios', credenciales);
+            return req;
+        };
     };
 })();

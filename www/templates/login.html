@@ -25,9 +25,10 @@
                     <input type="password" ng-model="user.credenciales.password">
                 </label>
             </div>
-            </div>
         </div>
-        <div class="spacer" style="height: 40px;"></div>
+        <div class="spacer text-center" style="height: 40px;">
+            <ion-spinner class="spinner spinner-android" ng-show="user.loading"></ion-spinner>
+        </div>
         <button ng-click="user.login()" class="button button-block button-positive" style="background-color: #0277bd; color: #fff;">
             Sign In
         </button>
@@ -37,9 +38,10 @@
             <p>&iquest;No tienes una cuenta SaberApp?</p>
             <a ui-sref="registrar-estudiante" style="text-decoration: none;">¡Registrate!</a>
         </div>
-        <!--<div class="col text-center">
-            <a ui-sref="app.home" style="text-decoration: none;">HOME</a>
-        </div>-->
+    </div>
+    <br><br>
+    <div class="col text-center">
+        <a ui-sref="app.home" style="text-decoration: none;">HOME</a>
     </div>
 
 </ion-content>

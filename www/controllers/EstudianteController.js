@@ -4,7 +4,7 @@
     angular.module('starter')
         .controller('EstudianteController', EstudianteController);
 
-    function EstudianteController($state, EstudianteService, $scope, $ionicPopup){
+    function EstudianteController($state, EstudianteService, $ionicPopup){
         /******************DECLARACION DE VARIABLES***************************/
         var vm = this;
         vm.universidades = [];
@@ -14,6 +14,7 @@
             'password': '',
             'confirm_password': ''
         };
+        vm.loading = false;
         /***************DECLARACION DE FUNCIONES DEL SCOPE VM*****************/
         vm.cargar_programa = function(){
             vm.programas = [];
@@ -38,6 +39,7 @@
             {
                 if(vm.usuario.password == vm.usuario.confirm_password)
                 {
+                    vm.loading = true;
                     _registrar_estudiante();
                 }
                 else {
@@ -55,7 +57,6 @@
 
         function _init() {
             get_universidades();
-            get_programas_universidades();
         };
 
         function get_universidades(){
@@ -67,6 +68,7 @@
                     {
                         vm.universidades = respuesta.universidades;
                         vm.universidad_seleccionada = vm.universidades[0];
+                        get_programas_universidades();
                     }
                 },
                 function(errorPl){
@@ -83,6 +85,7 @@
                     if(!respuesta.error)
                     {
                         vm.programas_universidades = respuesta.programas_universidades;
+                        //console.log(vm.programas_universidades);
                         vm.cargar_programa();
                     }
                 },
@@ -114,6 +117,7 @@
                         sapro._setEmail(respuesta.usuario.email);
                         sapro._setIdEstudiante(respuesta.usuario.id_usuario);
                         sapro._setNombreCompleto(respuesta.usuario.primer_nombre+" "+respuesta.usuario.primer_apellido);
+                        vm.loading = false;
                         $state.go('app.home');
                     }
                 },
